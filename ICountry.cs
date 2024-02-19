@@ -4,7 +4,7 @@ public class ICountry
 {
     public string Name { get; init; }
     
-    public string Capital { get; init; }
+    public string City { get; init; }
     
     public string Language { get; init; }
     
@@ -16,5 +16,5 @@ public class ICountry
     
     public string Description { get; init; }
     
-   
+
 }
