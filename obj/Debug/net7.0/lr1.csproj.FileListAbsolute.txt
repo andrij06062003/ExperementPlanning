@@ -1,0 +1,14 @@
+C:\Users\Андрій\Desktop\Work\codec#\lr1\lr1\bin\Debug\net7.0\lr1.exe
+C:\Users\Андрій\Desktop\Work\codec#\lr1\lr1\bin\Debug\net7.0\lr1.deps.json
+C:\Users\Андрій\Desktop\Work\codec#\lr1\lr1\bin\Debug\net7.0\lr1.runtimeconfig.json
+C:\Users\Андрій\Desktop\Work\codec#\lr1\lr1\bin\Debug\net7.0\lr1.dll
+C:\Users\Андрій\Desktop\Work\codec#\lr1\lr1\bin\Debug\net7.0\lr1.pdb
+C:\Users\Андрій\Desktop\Work\codec#\lr1\lr1\obj\Debug\net7.0\lr1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Андрій\Desktop\Work\codec#\lr1\lr1\obj\Debug\net7.0\lr1.AssemblyInfoInputs.cache
+C:\Users\Андрій\Desktop\Work\codec#\lr1\lr1\obj\Debug\net7.0\lr1.AssemblyInfo.cs
+C:\Users\Андрій\Desktop\Work\codec#\lr1\lr1\obj\Debug\net7.0\lr1.csproj.CoreCompileInputs.cache
+C:\Users\Андрій\Desktop\Work\codec#\lr1\lr1\obj\Debug\net7.0\lr1.dll
+C:\Users\Андрій\Desktop\Work\codec#\lr1\lr1\obj\Debug\net7.0\refint\lr1.dll
+C:\Users\Андрій\Desktop\Work\codec#\lr1\lr1\obj\Debug\net7.0\lr1.pdb
+C:\Users\Андрій\Desktop\Work\codec#\lr1\lr1\obj\Debug\net7.0\lr1.genruntimeconfig.cache
+C:\Users\Андрій\Desktop\Work\codec#\lr1\lr1\obj\Debug\net7.0\ref\lr1.dll

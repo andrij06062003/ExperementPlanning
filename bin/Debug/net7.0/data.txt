@@ -1,0 +1,10 @@
+Country0,Capital0,Language0,Currency0,661612020,303088,8742535586,Description0
+Country1,Capital1,Language1,Currency1,426108586,128843,81687935842,Description1
+Country2,Capital2,Language2,Currency2,146285890,352808,50955190556,Description2
+Country3,Capital3,Language3,Currency3,652124962,958432,3669096027,Description3
+Country4,Capital4,Language4,Currency4,715887529,97231,31522207851,Description4
+Country5,Capital5,Language5,Currency5,493511402,737332,8008328087,Description5
+Country6,Capital6,Language6,Currency6,360750021,239512,18241020667,Description6
+Country7,Capital7,Language7,Currency7,8819226,538111,3279412295,Description7
+Country8,Capital8,Language8,Currency8,83747590,472758,50245856354,Description8
+Country9,Capital9,Language9,Currency9,455724719,915478,4093708976,Description9
