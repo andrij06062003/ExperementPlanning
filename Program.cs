@@ -12,21 +12,22 @@ static class Program
         WriteDataToFile(filePath, countries);
 
        
-        Stopwatch stopwatchWithTask = Stopwatch.StartNew();
-        Task<List<ICountry>> sortingTask = Task.Run(() => Sort.SortCountries(countries));
-        sortingTask.Wait(); 
-        stopwatchWithTask.Stop();
-        long elapsedTimeWithTask = stopwatchWithTask.ElapsedMilliseconds;
-
-       
         Stopwatch stopwatchWithoutTask = Stopwatch.StartNew();
-        Sort.SortCountries(countries);
+        List<ICountry> sortedCountriesWithoutTask = Sort.SortCountries(countries);
         stopwatchWithoutTask.Stop();
         long elapsedTimeWithoutTask = stopwatchWithoutTask.ElapsedMilliseconds;
+        WriteDataToFile("sortednotask.txt", sortedCountriesWithoutTask);
 
-       
-        Console.WriteLine("Час сортування з використанням Task: " + elapsedTimeWithTask + " мс");
+
+        Stopwatch stopwatchWithTask = Stopwatch.StartNew();
+        Task<List<ICountry>> sortingTask = Task.Run(() => Sort.SortCountries(countries));
+        sortingTask.Wait();
+        stopwatchWithTask.Stop();
+        long elapsedTimeWithTask = stopwatchWithTask.ElapsedMilliseconds;
+        WriteDataToFile("sortedtask.txt", sortingTask.Result);
+
         Console.WriteLine("Час сортування без використання Task: " + elapsedTimeWithoutTask + " мс");
+        Console.WriteLine("Час сортування з використанням Task: " + elapsedTimeWithTask + " мс");
     }
     private static void WriteDataToFile(string filePath, List<ICountry> countries)
     {
@@ -34,7 +35,7 @@ static class Program
         {
             foreach (ICountry country in countries)
             {
-                writer.WriteLine($"{country.Name},{country.Capital},{country.Language},{country.Currency},{country.Population},{country.Area},{country.Description}");
+                writer.WriteLine($"{country.Name},{country.City},{country.Language},{country.Currency},{country.Population},{country.Area},{country.Description}");
             }
         }
     }
