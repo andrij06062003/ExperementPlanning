@@ -57,7 +57,7 @@ namespace lr1
             {
                 foreach (ICountry country in countries)
                 {
-                    writer.WriteLine($"{country.Name},{country.City},{country.Language},{country.Currency},{country.Population},{country.Area},{country.Description}");
+                    writer.WriteLine($"{country.Name},{country.Capital},{country.Language},{country.Currency},{country.Population},{country.Area},{country.Description}");
                 }
             }
         }
