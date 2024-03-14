@@ -1,0 +1,100 @@
+China,Berlin,Language25,Currency25,212837867,896600,4008222553,Description25
+China,Berlin,Language5,Currency5,452768152,575745,4109601626,Description5
+China,Berlin,Language46,Currency46,737607314,276283,0568364547,Description46
+China,Berlin,Language18,Currency18,764465141,11265,634314879591,Description18
+China,Moscow,Language16,Currency16,57855737,237993,36263941173,Description16
+China,Moscow,Language31,Currency31,198539609,124654,83142315803,Description31
+China,New York,Language24,Currency24,272255845,583296,9801342427,Description24
+China,New York,Language49,Currency49,985696483,431670,0952075686,Description49
+China,Paris,Language27,Currency27,485541958,67744,38213786538,Description27
+China,Rome,Language4,Currency4,190574453,69373,7238965636,Description4
+China,Rome,Language47,Currency47,682382834,109351,92972698393,Description47
+China,Rome,Language11,Currency11,847815656,394294,4097048867,Description11
+France,Beijing,Language8,Currency8,136987936,994677,5374267256,Description8
+France,Beijing,Language23,Currency23,752167437,172274,043133519,Description23
+France,Berlin,Language17,Currency17,994013210,920398,2789540088,Description17
+France,London,Language12,Currency12,929498315,590854,0398760313,Description12
+France,Moscow,Language19,Currency19,207093460,461006,86503905454,Description19
+France,Moscow,Language40,Currency40,326249342,814983,3406705902,Description40
+France,Moscow,Language36,Currency36,804966298,397998,2981950011,Description36
+France,Rome,Language22,Currency22,190116598,261202,60472894396,Description22
+France,Sydney,Language48,Currency48,834971841,628292,1086140578,Description48
+France,Sydney,Language32,Currency32,860090015,600382,6711567239,Description32
+France,Tokyo,Language43,Currency43,196875567,401124,1310782766,Description43
+France,Tokyo,Language0,Currency0,857605165,473149,1543495325,Description0
+Germany,Beijing,Language6,Currency6,23211592,174105,91353206785,Description6
+Germany,Berlin,Language34,Currency34,401335580,427734,89374342124,Description34
+Germany,Berlin,Language33,Currency33,525859158,538689,647754564,Description33
+Germany,London,Language44,Currency44,754577261,720280,2586110674,Description44
+Germany,Moscow,Language15,Currency15,462784196,150392,00862703283,Description15
+Germany,Rome,Language21,Currency21,570846802,186707,11301244004,Description21
+Germany,Tokyo,Language10,Currency10,937769937,477192,469099727,Description10
+Ukraine,Beijing,Language41,Currency41,350273913,239842,02117098696,Description41
+Ukraine,Berlin,Language9,Currency9,912494896,572659,4115532083,Description9
+Ukraine,Berlin,Language3,Currency3,930480311,252407,58320165635,Description3
+Ukraine,Kyiv,Language42,Currency42,240812454,595944,759456921,Description42
+Ukraine,Kyiv,Language14,Currency14,557728078,976475,2125232514,Description14
+Ukraine,Moscow,Language26,Currency26,691447977,538448,5753060438,Description26
+Ukraine,New York,Language13,Currency13,266714871,478902,7043713724,Description13
+Ukraine,New York,Language29,Currency29,826434763,430847,4340427859,Description29
+Ukraine,Paris,Language39,Currency39,91923319,984352,5362828147,Description39
+Ukraine,Paris,Language1,Currency1,369669549,8233,514736661451,Description1
+Ukraine,Paris,Language37,Currency37,826331492,220040,69232202962,Description37
+Ukraine,Sydney,Language20,Currency20,23794336,113371,05218414323,Description20
+USA,Beijing,Language7,Currency7,290621164,315584,127772234,Description7
+USA,Beijing,Language45,Currency45,618936123,487058,6809105265,Description45
+USA,Kyiv,Language28,Currency28,354391317,800820,345235069,Description28
+USA,Moscow,Language30,Currency30,178144994,1321,4470113223076,Description30
+USA,Moscow,Language38,Currency38,526117058,574829,1572744341,Description38
+USA,Moscow,Language35,Currency35,847705845,556907,074803997,Description35
+USA,Rome,Language2,Currency2,644803617,508909,8168147717,Description2
+China,Kyiv,Language63,Currency63,317978802,821613,863539641,Description63
+China,London,Language85,Currency85,348063965,456899,582732779,Description85
+China,London,Language79,Currency79,427803894,133608,57906969913,Description79
+China,London,Language58,Currency58,780920868,990398,7105542263,Description58
+China,Moscow,Language72,Currency72,448759665,49126,89321808372,Description72
+China,Rome,Language51,Currency51,200326533,378661,464179646,Description51
+China,Rome,Language56,Currency56,935678339,248433,98920869554,Description56
+China,Sydney,Language76,Currency76,753226443,394918,5639757936,Description76
+France,Beijing,Language52,Currency52,590168887,619360,5398165442,Description52
+France,London,Language55,Currency55,878440959,106793,1547530162,Description55
+France,Moscow,Language96,Currency96,526070432,424365,66879039485,Description96
+France,New York,Language59,Currency59,955916468,164047,9928818761,Description59
+France,New York,Language74,Currency74,992954913,898608,8723821979,Description74
+France,Paris,Language83,Currency83,75640643,327828,5619035141,Description83
+France,Rome,Language67,Currency67,583181241,203365,18265165703,Description67
+France,Rome,Language65,Currency65,642225038,618595,8780366165,Description65
+France,Tokyo,Language57,Currency57,388144104,67403,14360850619,Description57
+France,Tokyo,Language68,Currency68,526142506,672781,5076470342,Description68
+Germany,Kyiv,Language71,Currency71,40883651,217552,37280471175,Description71
+Germany,Kyiv,Language95,Currency95,359113436,912236,9044365846,Description95
+Germany,London,Language73,Currency73,754183453,905586,8476349055,Description73
+Germany,Moscow,Language90,Currency90,544117999,972495,2630747056,Description90
+Germany,New York,Language94,Currency94,34177787,834353,2120091355,Description94
+Germany,New York,Language89,Currency89,147893567,2669,4173354008253,Description89
+Germany,New York,Language60,Currency60,857905202,269918,4491904092,Description60
+Ukraine,Beijing,Language87,Currency87,912206813,16621,18148221603,Description87
+Ukraine,Berlin,Language75,Currency75,246684383,81151,28102317959,Description75
+Ukraine,Kyiv,Language61,Currency61,60867694,566159,7457963662,Description61
+Ukraine,London,Language99,Currency99,619953771,748282,6795879657,Description99
+Ukraine,Moscow,Language98,Currency98,169221950,474073,1114944131,Description98
+Ukraine,Moscow,Language93,Currency93,868759198,604779,8779484594,Description93
+Ukraine,Paris,Language97,Currency97,411949197,921130,3757461082,Description97
+Ukraine,Rome,Language78,Currency78,719340255,717672,8209807591,Description78
+Ukraine,Sydney,Language70,Currency70,95264022,757675,0129880292,Description70
+Ukraine,Sydney,Language84,Currency84,347211966,566864,1345546081,Description84
+Ukraine,Sydney,Language66,Currency66,362203015,662231,9163850759,Description66
+Ukraine,Sydney,Language88,Currency88,435319494,578780,1386986721,Description88
+Ukraine,Tokyo,Language62,Currency62,207713069,764611,8741194423,Description62
+USA,Beijing,Language54,Currency54,678462231,343358,3670240786,Description54
+USA,Berlin,Language64,Currency64,479881098,706638,88656546,Description64
+USA,Kyiv,Language81,Currency81,276603283,425694,3491601135,Description81
+USA,Kyiv,Language69,Currency69,348488631,569350,4920660455,Description69
+USA,Moscow,Language82,Currency82,102381792,393514,0735168641,Description82
+USA,Moscow,Language91,Currency91,372875347,593608,3396041389,Description91
+USA,Moscow,Language86,Currency86,952066185,329375,8046540475,Description86
+USA,New York,Language53,Currency53,653439419,8196,941331644392,Description53
+USA,Rome,Language92,Currency92,300780661,203176,40585964537,Description92
+USA,Sydney,Language77,Currency77,451455208,965649,9749280879,Description77
+USA,Sydney,Language50,Currency50,510333905,137894,90815335736,Description50
+USA,Tokyo,Language80,Currency80,186412155,251243,028247345,Description80
