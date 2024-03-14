@@ -48,7 +48,7 @@ namespace lr1
             WriteDataToFile("sortedwiththreads.txt", mergedSortedCountries);
 
             Console.WriteLine("Час сортування без використання Thread: " + elapsedTimeWithoutThread + " мс");
-            Console.WriteLine("Час сортування з використанням Thread: " + elapsedTimeWithThreads + " мс");
+            Console.WriteLine("Час сортування з використанням Thread:  " + elapsedTimeWithThreads + " мс");
         }
 
         private static void WriteDataToFile(string filePath, List<ICountry> countries)
