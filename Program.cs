@@ -3,11 +3,17 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
 using System.Threading;
+using System.Threading.Tasks;
+using Lr2;
 
-namespace lr1
+namespace Lr3
 {
     static class Program
     {
+        private static readonly object _lockObj = new object();
+        private static readonly Mutex _mutex = new Mutex();
+        private static int _counter = 0;
+
         public static void Main(string[] args)
         {
             Console.WriteLine("Введіть розмір тестових даних:");
@@ -16,41 +22,99 @@ namespace lr1
             string filePath = "data.txt";
             WriteDataToFile(filePath, countries);
 
-            Stopwatch stopwatchWithoutThread = Stopwatch.StartNew();
-            List<ICountry> sortedCountriesWithoutThread = Sort.SortCountries(countries);
-            stopwatchWithoutThread.Stop();
-            long elapsedTimeWithoutThread = stopwatchWithoutThread.ElapsedMilliseconds;
-            WriteDataToFile("sortednotask.txt", sortedCountriesWithoutThread);
-
-            Stopwatch stopwatchWithThreads = Stopwatch.StartNew();
-            List<ICountry> sortedCountries1 = null;
-            List<ICountry> sortedCountries2 = null;
-
-            Thread thread1 = new Thread(() =>
+         
+            Task task1 = new Task(() =>
             {
-                sortedCountries1 = Sort.SortCountries(countries.GetRange(0, dataSize / 2));
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                FunctionWithCriticalSectionLock(countries);
+                stopwatch.Stop();
+                long elapsedTime = stopwatch.ElapsedMilliseconds;
+                Console.WriteLine("Час сортування захищеного lock: " + elapsedTime + " мс");
+            });
+            task1.Start();
+
+            
+            Task task2 = Task.Factory.StartNew(() =>
+            {
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                FunctionWithCriticalSectionMonitor(countries);
+                stopwatch.Stop();
+                long elapsedTime = stopwatch.ElapsedMilliseconds;
+                Console.WriteLine("Час сортування захищеного Monitor.Enter: " + elapsedTime + " мс");
             });
 
-            Thread thread2 = new Thread(() =>
+           
+            Task task3 = Task.Factory.StartNew(() =>
             {
-                sortedCountries2 = Sort.SortCountries(countries.GetRange(dataSize / 2, dataSize - dataSize / 2));
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                FunctionWithCriticalSectionMutex(countries);
+                stopwatch.Stop();
+                long elapsedTime = stopwatch.ElapsedMilliseconds;
+                Console.WriteLine("Час сортування захищеного Mutex: " + elapsedTime + " мс");
             });
 
-            thread1.Start();
-            thread2.Start();
-            thread1.Join();
-            thread2.Join();
+         
+            Task task4 = Task.Factory.StartNew(() =>
+            {
+                Stopwatch stopwatch = Stopwatch.StartNew();
+                FunctionWithCriticalSectionInterlocked();
+                stopwatch.Stop();
+                long elapsedTime = stopwatch.ElapsedMilliseconds;
+                Console.WriteLine("Час сортування захищеного Interlocked: " + elapsedTime + " мс");
+            });
 
-            List<ICountry> mergedSortedCountries = Merge(sortedCountries1, sortedCountries2);
-            stopwatchWithThreads.Stop();
-            long elapsedTimeWithThreads = stopwatchWithThreads.ElapsedMilliseconds;
-
-            WriteDataToFile("sortedwiththreads.txt", mergedSortedCountries);
-
-            Console.WriteLine("Час сортування без використання Thread: " + elapsedTimeWithoutThread + " мс");
-            Console.WriteLine("Час сортування з використанням Thread:  " + elapsedTimeWithThreads + " мс");
+            Task.WaitAll(task1, task2, task3, task4);
         }
 
+        private static void FunctionWithCriticalSectionLock(List<ICountry> countries)
+        {
+            lock (_lockObj)
+            {
+                List<ICountry> sortedCountries = Sort.SortCountries(countries);
+                WriteDataToFile("sorted_lock.txt", sortedCountries);
+            }
+        }
+
+        private static void FunctionWithCriticalSectionMonitor(List<ICountry> countries)
+        {
+            Monitor.Enter(_lockObj);
+            try
+            {
+                List<ICountry> sortedCountries = Sort.SortCountries(countries);
+                WriteDataToFile("sorted_monitor.txt", sortedCountries);
+            }
+            finally
+            {
+                Monitor.Exit(_lockObj);
+            }
+        }
+
+        private static void FunctionWithCriticalSectionMutex(List<ICountry> countries)
+        {
+            _mutex.WaitOne();
+            try
+            {
+                List<ICountry> sortedCountries = Sort.SortCountries(countries);
+                WriteDataToFile("sorted_mutex.txt", sortedCountries);
+            }
+            finally
+            {
+                _mutex.ReleaseMutex();
+            }
+        }
+
+        private static void FunctionWithCriticalSectionInterlocked()
+        {
+            int count = 0;
+            using (StreamReader reader = new StreamReader("data.txt"))
+            {
+                while (reader.ReadLine() != null)
+                {
+                    count++;
+                }
+            }
+            Interlocked.Add(ref _counter, count);
+        }
         private static void WriteDataToFile(string filePath, List<ICountry> countries)
         {
             using (StreamWriter writer = new StreamWriter(filePath))
@@ -60,14 +124,6 @@ namespace lr1
                     writer.WriteLine($"{country.Name},{country.City},{country.Language},{country.Currency},{country.Population},{country.Area},{country.Description}");
                 }
             }
-        }
-
-        private static List<ICountry> Merge(List<ICountry> list1, List<ICountry> list2)
-        {
-            List<ICountry> mergedList = new List<ICountry>();
-            mergedList.AddRange(list1);
-            mergedList.AddRange(list2);
-            return mergedList;
         }
     }
 }
